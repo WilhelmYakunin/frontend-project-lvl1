@@ -1,0 +1,16 @@
+{
+  "name": "brai-games",
+  "version": "0.0.1",
+  "description": "",
+  "main": "bin/brain-games.js",
+  "scripts": {
+    "start": "node --experimental-modules bin/brain-games.js"
+  },
+  "type": "module",
+  "bin": {
+    "brain-games": "--experimental-modules bin/brain-games.js"
+  },
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
+}
