@@ -11,6 +11,7 @@
     "brain-games": "--experimental-modules bin/brain-games.js"
   },
   "dependencies": {
-    "esm": "^3.2.25"
+    "esm": "^3.2.25",
+    "readline-sync": "^1.4.10"
   }
 }
