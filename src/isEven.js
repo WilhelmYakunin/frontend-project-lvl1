@@ -1,15 +1,16 @@
 import readlineSync from 'readline-sync';
-
-const rangeNum = () => Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+import randomNum from './randomNum.js';
 
 const brainEven = (name) => {
   const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
   console.log(rule);
 
-  let circle = 0;
+  let circle = 0; // establish a zero cicle =>
+  // if an answer would be rigth this number will increase
+  // if an answer would be wrong this number will decrease to 0
 
   while (circle !== 3) {
-    const num = rangeNum();
+    const num = randomNum(1, 100); // get a random number from 1 to 100
     const answer = readlineSync.question(`Question: ${num} \n`);
     console.log(`Your answer: ${answer}`);
     const answerSwitch = (answer === 'yes') ? 'no' : 'yes';

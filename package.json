@@ -9,7 +9,8 @@
   "type": "module",
   "bin": {
     "brain-games": "./bin/brain-games.js",
-    "brain-even": "./bin/brain-even.js"
+    "brain-even": "./bin/brain-even.js",
+    "brain-calc": "./bin/calc.js"
   },
   "dependencies": {
     "brai-games": "0.0.4",
