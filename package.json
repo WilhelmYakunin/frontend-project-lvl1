@@ -1,6 +1,6 @@
 {
-  "name": "brai-games",
-  "version": "0.0.1",
+  "name": "brain-games",
+  "version": "0.0.5",
   "description": "",
   "main": "bin/brain-games.js",
   "scripts": {
@@ -8,9 +8,11 @@
   },
   "type": "module",
   "bin": {
-    "brain-games": "--experimental-modules bin/brain-games.js"
+    "brain-games": "./bin/brain-games.js",
+    "brain-even": "./bin/brain-even.js"
   },
   "dependencies": {
+    "brai-games": "0.0.4",
     "eslint": "^7.1.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-airbnb-base": "^14.1.0",

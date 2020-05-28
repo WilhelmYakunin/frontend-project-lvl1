@@ -1,9 +1,6 @@
-import readlineSync from 'readline-sync';
-
-const sayHello = () => {
-  console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName[0].toUpperCase()}${userName.slice(1)}!`);
+const sayHello = (name) => {
+  console.log(`Welcome to the Brain Games! \n
+  Hello, ${name}! \n`);
 };
 
 export default sayHello;
