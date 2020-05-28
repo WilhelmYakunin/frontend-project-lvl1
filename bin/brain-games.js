@@ -1,5 +1,4 @@
 #! node --experimental-modules
-
 import sayHello from '../src/cli.js';
 import userName from '../src/getName.js';
 

@@ -1,5 +1,3 @@
-#! node --experimental-modules
-
 import readlineSync from 'readline-sync';
 
 const rangeNum = () => Math.floor(Math.random() * (100 - 1 + 1)) + 1;
