@@ -2,4 +2,6 @@
 
 <a href="https://github.com/WilhelmYakunin/frontend-project-lvl1/actions"><img src="https://github.com/WilhelmYakunin/frontend-project-lvl1/workflows/brain-games%20project%20of%20lvl-1/badge.svg" alt="Braing Games" style="max-width:100%;"></a>
 
+[is Even? video](https://youtu.be/CYDIFqEj_-E)
+
 "# frontend-project-lvl1" 
