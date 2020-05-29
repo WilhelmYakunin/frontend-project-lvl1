@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import randomNum from './randomNum.js';
+import randomNum from '../src/randomNum.js';
 
 const ariphmeticProgression = (name) => {
   const rule = 'What number is missing in the progression?';

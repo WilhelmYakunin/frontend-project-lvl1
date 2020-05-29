@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import randomNum from './randomNum.js';
+import randomNum from '../src/randomNum.js';
 
 const gcd = (name) => {
   const rule = 'Find the greatest common divisor of given numbers.';

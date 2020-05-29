@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import randomNum from './randomNum.js';
+import randomNum from '../src/randomNum.js';
 
 const brainEven = (name) => {
   const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
