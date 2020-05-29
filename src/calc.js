@@ -10,25 +10,36 @@ const calc = (name) => {
   // if an answer would be wrong this number will decrease to 0
 
   while (circle !== 3) {
+    // get a random number from -30 to 30 just for simplicity
     const num1 = randomNum(-30, 30);
-    // get a random number from -30 to 30 just for siplicity
+
+    // get a random number from 1 to 30 just for simplicity
     const num2 = randomNum(1, 30);
-    // get a random number from 1 to 30 just for siplicity
 
-    const arrOfquatyfires = ['+', '-', '*'];
     // array of the mathematic signs
-    const quantyfire = arrOfquatyfires[randomNum(0, 2)];
+    const arrOfquatyfires = ['+', '-', '*'];
+
     // randomly choose a sign
+    const quantyfire = arrOfquatyfires[randomNum(0, 2)];
 
-    const expressionToEval = num1.toString() + quantyfire + num2.toString();
     // formulating an expression consistiong of nums and sings randomly choosen
-    const calculate = eval;
-    const evaluatedExpression = calculate(expressionToEval);
-    // evaluated expression is the right answer
+    const expressionToEval = `${num1.toString()} ${quantyfire} ${num2.toString()}`;
 
+    // make function for sings of mathematic operators
+    const arrOfFunction = {
+      '+': function plus(x, y) { return x + y; },
+      '-': function minus(x, y) { return x - y; },
+      '*': function multiply(x, y) { return x * y; },
+    };
+
+    // evaluated expression is the right answer
+    const evaluatedExpression = arrOfFunction[quantyfire](num1, num2);
+
+    // get an answer from user
     const answer = readlineSync.question(`Question: ${expressionToEval} \n`);
     console.log(`Your answer: ${answer}`);
 
+    // starting the cickle of answering
     if (Number(answer) === evaluatedExpression) {
       console.log('Correct!\n');
       circle += 1;
