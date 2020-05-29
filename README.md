@@ -4,10 +4,11 @@ This a project, writting by the JavaScript programming languge, presenting the m
 The project is called "Brain games". 
 Thought the gameplay a user ought to answer to three question per three session.
 Those sessions are chossen randomly from this range of games:
-1) is tne number Even?
+1) is tne number even?
 2) what the result of an expression is?
-3) what the Gratest Common devisor is?
+3) what the Gratest common devisor is?
 4) what a number is missing in the chain?
+5) is this number prime, i.e. doesn't have divisors excepting the number 1 and its self?
 
 Please download this game by link below:
 <a href="https://github.com/WilhelmYakunin/frontend-project-lvl1/archive/master.zip">archive copy</a>
@@ -24,5 +25,7 @@ Please take a look at how to win each game here:
 3) [what the Gratest Common devisor is? video](https://youtu.be/HROl4j2f6oc)
 
 4) [what a number is missing in the chain? video](https://youtu.be/6hz4M4mLlD0)
+
+5) [is this number prime? video](https://youtu.be/Pyb-HYBn_j8)
 
 For more API information please see the package.json file or just put the string "make install" in the core catalog with the CLI. 
