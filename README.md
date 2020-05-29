@@ -6,6 +6,8 @@ Thought the gameplay a user ought to answer to three question per three session.
 Those sessions are chossen randomly from this range of games:
 1) is tne number Even?
 2) what the result of an expression is?
+3) what the Gratest Common devisor is?
+4) what a number is missing in the chain?
 
 Please download this game by link below:
 <a href="https://github.com/WilhelmYakunin/frontend-project-lvl1/archive/master.zip">archive copy</a>
@@ -20,5 +22,7 @@ Please take a look at how to win each game here:
 2) [what the result of an expression is? video](https://youtu.be/Gpr-w40AOTI)
 
 3) [what the Gratest Common devisor is? video](https://youtu.be/HROl4j2f6oc)
+
+4) [what a number is missing in the chain? video](https://youtu.be/6hz4M4mLlD0)
 
 For more API information please see the package.json file or just put the string "make install" in the core catalog with the CLI. 
