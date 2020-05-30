@@ -1,7 +1,5 @@
 #! node --experimental-modules
-import sayHello from '../src/cli.js';
-import userName from '../src/getName.js';
+import name from '../src/getName.js';
+import greeting from '../src/greeting.js';
 
-const name = userName[0].toUpperCase() + userName.slice(1);
-
-sayHello(name);
+greeting(name);

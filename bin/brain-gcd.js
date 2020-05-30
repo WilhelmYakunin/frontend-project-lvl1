@@ -1,10 +1,7 @@
 #! node --experimental-modules
-import userName from '../src/getName.js';
-import sayHello from '../src/cli.js';
+import name from '../src/getName.js';
+import greeting from '../src/greeting.js';
 import gcd from '../games/gcd.js';
 
-const name = userName[0].toUpperCase() + userName.slice(1);
-
-sayHello(name);
-
+greeting(name);
 gcd(name);

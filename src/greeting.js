@@ -1,6 +1,6 @@
-const sayHello = (name) => {
+const greeting = (name) => {
   console.log(`Welcome to the Brain Games! \n
   Hello, ${name}! \n`);
 };
 
-export default sayHello;
+export default greeting;
