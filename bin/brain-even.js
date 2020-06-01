@@ -1,5 +1,5 @@
 #! node --experimental-modules
 import game from '../games/index.js';
-import gameData from '../src/gemaData.js';
+import evenGamePlay from '../games/isEven.js';
 
-game(gameData.isEven);
+game(evenGamePlay);

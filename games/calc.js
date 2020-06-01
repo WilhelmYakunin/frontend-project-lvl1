@@ -1,56 +1,48 @@
 import readlineSync from 'readline-sync';
 import randomNum from '../src/randomNum.js';
 
-const calc = (name) => {
-  const rule = 'What is the result of the expression?';
-  console.log(rule);
+const calcGamePlay = function calc() {
+  return {
+    rule: 'What is the result of the expression?',
+    setGameData() {
+      // get a random number from -30 to 30 just for simplicity
+      const num1 = randomNum(-30, 30);
 
-  let circle = 0; // establish a zero cicle =>
-  // if an answer would be rigth this number will increase
-  // if an answer would be wrong this number will decrease to 0
+      // get a random number from 1 to 30 just for simplicity
+      const num2 = randomNum(1, 30);
 
-  while (circle !== 3) {
-    // get a random number from -30 to 30 just for simplicity
-    const num1 = randomNum(-30, 30);
+      // array of the mathematic signs
+      const arrOfquatyfires = ['+', '-', '*'];
 
-    // get a random number from 1 to 30 just for simplicity
-    const num2 = randomNum(1, 30);
+      // randomly choose a sign
+      const quantyfire = arrOfquatyfires[randomNum(0, 2)];
 
-    // array of the mathematic signs
-    const arrOfquatyfires = ['+', '-', '*'];
+      // formulating an expression consistiong of nums and sings randomly choosen
+      const question = `${num1.toString()} ${quantyfire} ${num2.toString()}`;
 
-    // randomly choose a sign
-    const quantyfire = arrOfquatyfires[randomNum(0, 2)];
+      // make function for sings of mathematic operators
+      const arrOfFunction = {
+        '+': function plus(x, y) { return x + y; },
+        '-': function minus(x, y) { return x - y; },
+        '*': function multiply(x, y) { return x * y; },
+      };
 
-    // formulating an expression consistiong of nums and sings randomly choosen
-    const expressionToEval = `${num1.toString()} ${quantyfire} ${num2.toString()}`;
+      // evaluated expression is the right answer
+      const right = arrOfFunction[quantyfire](num1, num2);
 
-    // make function for sings of mathematic operators
-    const arrOfFunction = {
-      '+': function plus(x, y) { return x + y; },
-      '-': function minus(x, y) { return x - y; },
-      '*': function multiply(x, y) { return x * y; },
-    };
-
-    // evaluated expression is the right answer
-    const evaluatedExpression = arrOfFunction[quantyfire](num1, num2);
-
-    // get an answer from user
-    const answer = readlineSync.question(`Question: ${expressionToEval} \n`);
-    console.log(`Your answer: ${answer}`);
-
-    // starting the cickle of answering
-    if (Number(answer) === evaluatedExpression) {
-      console.log('Correct!\n');
-      circle += 1;
-    } else {
-      console.log(`${answer} is wrong answer ;(. 
-          Correct answer was ${evaluatedExpression}.
-          Let's try again, ${name}!`);
-      circle = 0;
-    }
-  }
-  console.log(`Congratulations, ${name}!`);
+      return { question, right };
+    },
+    // get user's answer
+    getAnswer(question) {
+      return readlineSync.question(`Question: ${question} \n`);
+    },
+    // get correctAnswer for put in the game do-while loop
+    getCorrectAnswer(right) {
+      return right;
+    },
+    // checking if user was wrong with the answer
+    answerCheck(answer, right) { return Number(answer) === right; },
+  };
 };
 
-export default calc;
+export default calcGamePlay;

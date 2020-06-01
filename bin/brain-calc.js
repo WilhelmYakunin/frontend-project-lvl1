@@ -1,8 +1,5 @@
 #! node --experimental-modules
-import name from '../src/getName.js';
-import greeting from '../src/greeting.js';
-import calc from '../games/calc.js';
+import game from '../games/index.js';
+import calcGamePlay from '../games/calc.js';
 
-greeting(name);
-
-calc(name);
+game(calcGamePlay);

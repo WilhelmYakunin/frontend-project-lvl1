@@ -1,52 +1,44 @@
 import readlineSync from 'readline-sync';
 import randomNum from '../src/randomNum.js';
 
-const ariphmeticProgression = (name) => {
-  const rule = 'What number is missing in the progression?';
-  console.log(rule);
+const progressionGamePlay = function mathProgression() {
+  return {
+    rule: 'What number is missing in the progression?',
+    setGameData() {
+      // make a progression step
+      const progression = randomNum(1, 10);
 
-  let circle = 0; // establish a zero cicle =>
-  // if an answer would be rigth this number will increase
-  // if an answer would be wrong this number will decrease to 0
+      // formulating an expression staffed with ariphmetic progression
+      // first initialize a first element in the array
+      const progressionArray = [randomNum(-30, 30)];
 
-  while (circle !== 3) {
-    // make a number that will progress the progression sequence
-    const progression = randomNum(1, 10);
+      // make the array staffed with progression numbers
+      for (let i = 1; i < 10; i += 1) {
+        const nextNum = progressionArray[(i - 1)] + progression;
+        progressionArray.push(nextNum);
+      }
 
-    // formulating an expression staffed with ariphmetic progression
-    // first initialize a first element in the array
-    const progressionArray = [randomNum(-30, 30)];
+      // defin the rigth answer through the random numbers
+      const guessIndex = randomNum(0, 9);
+      const right = progressionArray[guessIndex];
 
-    // make the array staffed with progression numbers
-    for (let i = 1; i < 10; i += 1) {
-      const nextNum = progressionArray[(i - 1)] + progression;
-      progressionArray.push(nextNum);
-    }
+      // assign progression array to a string
+      const progressionString = progressionArray.toString();
+      const question = progressionString.replace(right, '..').replace(/,/g, ' ');
 
-    // defin the rigth answer through a random number
-    const guessIndex = randomNum(1, 10);
-    const rightAnswer = progressionArray[guessIndex];
-
-    // assign progression array to a string
-    const progressionString = progressionArray.toString();
-    const progressionForUser = progressionString.replace(rightAnswer, '..').replace(/,/g, ' ');
-
-    // assing down the user's answer
-    const answer = readlineSync.question(`Question: ${progressionForUser} \n`);
-    console.log(`Your answer: ${answer}`);
-
-    // make cicle for checking/rejecting the rigthness of user's answer
-    if (Number(answer) === rightAnswer) {
-      console.log('Correct!\n');
-      circle += 1;
-    } else {
-      console.log(`${answer} is wrong answer ;(. 
-          Correct answer was ${rightAnswer}.
-          Let's try again, ${name}!`);
-      circle = 0;
-    }
-  }
-  console.log(`Congratulations, ${name}!`);
+      return { question, right };
+    },
+    // get user's answer
+    getAnswer(question) {
+      return readlineSync.question(`Question: ${question} \n`);
+    },
+    // get correctAnswer for put in the game do-while loop
+    getCorrectAnswer(right) {
+      return right;
+    },
+    // checking if user was wrong with the answer
+    answerCheck(answer, right) { return Number(answer) === right; },
+  };
 };
 
-export default ariphmeticProgression;
+export default progressionGamePlay;
