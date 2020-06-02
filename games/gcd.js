@@ -14,15 +14,9 @@ const gcdGamePlay = function gcd() {
       // formulating an expression consistiong of nums and sings randomly choosen
       const question = `${num1.toString()} ${num2.toString()}`;
 
-      // finding of divisors of each random nuber separetly
-      const getOwnDivisors = (num) => {
-        const ownDivisors = [];
-        for (let i = 1; i <= num; i += 1) {
-          if (num % i === 0) {
-            ownDivisors.push(i);
-          }
-        } return ownDivisors;
-      };
+      // finding of the divisors of each random nuber separetly
+      const getOwnDivisors = (num) => [...Array(num + 1).keys()].slice(1)
+        .filter((iter) => num % iter === 0);
 
       // make constant that find the common devisors
       const getInt = (arr1, arr2) => arr1.filter((value) => arr2.includes(value));

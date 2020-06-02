@@ -6,15 +6,12 @@ const primeGamePlay = function prime() {
     rule: 'Answer "yes" if given number is prime. Otherwise answer "no".',
     setGameData() {
       const question = randomNum(1, 100);// get a random number for question
+
       // make the function for evaluating the "right" parametr
-      const isPrime = () => {
-        for (let i = 2; i < question; i += 1) {
-          if (question % i === 0) {
-            return false;
-          }
-        } return true;
-      };
-      const right = isPrime();// get data for checking user's answer
+      // get data for checking user's answer
+      const isPrime = () => ![...Array(question).keys()].slice(2)
+        .map((iter) => !(question % iter)).includes(true) && ![0, 1].includes(question);
+      const right = isPrime();
 
       return { question, right };
     },
