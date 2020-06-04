@@ -1,5 +1,5 @@
 #! node --experimental-modules
-import game from '../games/index.js';
-import primeGamePlay from '../games/isPrime.js';
+import game from '../src/index.js';
+import prime from '../src/games/isPrime.js';
 
-game(primeGamePlay);
+game(prime);

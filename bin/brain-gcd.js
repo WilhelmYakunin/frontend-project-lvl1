@@ -1,5 +1,5 @@
 #! node --experimental-modules
-import game from '../games/index.js';
-import gcdGamePlay from '../games/gcd.js';
+import game from '../src/index.js';
+import gcd from '../src/games/gcd.js';
 
-game(gcdGamePlay);
+game(gcd);

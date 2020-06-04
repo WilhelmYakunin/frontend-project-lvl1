@@ -1,5 +1,5 @@
 #! node --experimental-modules
-import game from '../games/index.js';
-import evenGamePlay from '../games/isEven.js';
+import game from '../src/index.js';
+import even from '../src/games/isEven.js';
 
-game(evenGamePlay);
+game(even);

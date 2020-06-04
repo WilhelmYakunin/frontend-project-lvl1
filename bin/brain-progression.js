@@ -1,5 +1,5 @@
 #! node --experimental-modules
-import game from '../games/index.js';
-import progressionGamePlay from '../games/progression.js';
+import game from '../src/index.js';
+import mathProgression from '../src/games/progression.js';
 
-game(progressionGamePlay);
+game(mathProgression);
