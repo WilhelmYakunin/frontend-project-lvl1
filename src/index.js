@@ -2,14 +2,13 @@ import readlineSync from 'readline-sync';
 import greeting from './greeting.js';
 import name from './getName.js';
 import gameRules from './gameRules.js';
+import correctAnswerWas from './correctAnswerWas.js';
 
-const game = (gameFunction) => {
+function game(gameFunction) {
   greeting(name);
-
   console.log(gameRules[gameFunction.name]);
 
   let cicle = 0;
-
   do {
     // for each loop cickle we make a state of data of the game:
     // question statement and data for checking user's answer
@@ -19,28 +18,20 @@ const game = (gameFunction) => {
     const answer = readlineSync.question(`Question: ${getGameData.question} \n`);
     console.log(`Your answer: ${answer}`);
 
-    // checking if the user is not wrong: just booleans is expected to be returned
-    const answerCheck = () => answer === getGameData.right;
-
-    // make a function answer to show the user if nessesary
-    const correctAnswer = function correctAnswerWas() {
-      if ((gameFunction.name === 'even') || (gameFunction.name === 'prime')) {
-        return (getGameData.right === 'yes') ? 'yes' : 'no';
-      } return getGameData.right;
-    };
-
     // procceding all the data through the all the games loop
-    if (answerCheck()) {
+    // at first: check the user's answer
+    if (answer === getGameData.right) {
       console.log('Correct!\n');
       cicle += 1;
     } else {
-      console.log(`${answer} is wrong answer ;(. 
-        Correct answer was ${correctAnswer()}.
+      // show user the right answer in case of wrong answer
+      console.log(`${answer} is wrong answer ;(.
+        Correct answer was ${correctAnswerWas(gameFunction.name, getGameData.right)}.
         Let's try again, ${name}!`);
       cicle = 0;
     }
   } while (cicle !== 3);
   console.log(`Congratulations, ${name}!`);
-};
+}
 
 export default game;
