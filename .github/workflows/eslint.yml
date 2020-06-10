@@ -13,7 +13,11 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
+<<<<<<< HEAD
     runs-on: ubuntu-leatest
+=======
+    runs-on: ubuntu-latest
+>>>>>>> fc01e4fdc51f777eedcf692995982227ba3e0713
 
     strategy:
       # Node versions list
