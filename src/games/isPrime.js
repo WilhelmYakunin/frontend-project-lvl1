@@ -1,17 +1,15 @@
 import getRandomNum from '../getRandomNum.js';
 
 function prime() {
-  const question = getRandomNum(1, 100);
+  const question = getRandomNum(4, 100);
 
   const isPrime = (num) => {
-    if (Math.abs(num) <= 3) {
-      return true;
-    } const limit = Math.sqrt(num);
-    for (let i = 2; i <= limit; i += 1) {
+    for (let i = 2; i < Math.sqrt(question); i += 1) {
       if (num % i === 0) {
         return false;
       }
-    } return true;
+    }
+    return true;
   };
 
   const rightAnswer = (isPrime(question)) ? 'yes' : 'no';
