@@ -4,7 +4,7 @@ install-deps:
 	npm ci
 
 brain-games: 
-	 node --experimental-modules bin/brain-games.js
+	 node bin/brain-games.js
 
 publish:
 	npm publish --dry-run

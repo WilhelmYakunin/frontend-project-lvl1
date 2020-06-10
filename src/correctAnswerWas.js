@@ -1,9 +1,7 @@
-// if function of 'is even' or 'is prime' game is called it needs to switch
-// otherwise is expected the evaluated right answer to show up
-function correctAnswerWas(name, right) {
+function correctAnswerWas(name, rightAnswer) {
   if ((name === 'even') || (name === 'prime')) {
-    return (right === 'yes') ? 'yes' : 'no';
-  } return right;
+    return (rightAnswer === 'yes') ? 'yes' : 'no';
+  } return rightAnswer;
 }
 
 export default correctAnswerWas;

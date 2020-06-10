@@ -1,15 +1,22 @@
-import randomNum from '../randomNum.js';
+import getRandomNum from '../getRandomNum.js';
 
 function prime() {
-  const question = randomNum(1, 100);// get a random number for question
+  const question = getRandomNum(1, 100);
 
-  // make the function for evaluating the "right" parametr
-  const isPrime = () => ![...Array(question).keys()].slice(2)
-    .map((iter) => !(question % iter)).includes(true) && ![0, 1].includes(question);
-  // get data for checking user's answer
-  const right = (isPrime()) ? 'yes' : 'no';
+  const isPrime = (num) => {
+    if (Math.abs(num) <= 3) {
+      return true;
+    } const limit = Math.sqrt(num);
+    for (let i = 2; i <= limit; i += 1) {
+      if (num % i === 0) {
+        return false;
+      }
+    } return true;
+  };
 
-  return { question, right };
+  const rightAnswer = (isPrime(question)) ? 'yes' : 'no';
+
+  return { question, rightAnswer };
 }
 
 export default prime;

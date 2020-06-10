@@ -1,28 +1,20 @@
-import randomNum from '../randomNum.js';
+import getRandomNum from '../getRandomNum.js';
 
 function mathProgression() {
-  // make a progression step
-  const progression = randomNum(1, 10);
+  const progressionStep = getRandomNum(1, 10);
+  const progressionArray = [getRandomNum(-30, 30)];
 
-  // formulating an expression staffed with ariphmetic progression
-  // first initialize a first element in the array
-  const progressionArray = [randomNum(-30, 30)];
-
-  // make the array staffed with progression numbers
   for (let i = 1; i < 10; i += 1) {
-    const nextNum = progressionArray[(i - 1)] + progression;
+    const nextNum = progressionArray[(i - 1)] + progressionStep;
     progressionArray.push(nextNum);
   }
 
-  // defin the rigth answer through the random numbers
-  const guessIndex = randomNum(0, 9);
-  const right = progressionArray[guessIndex].toString();
-
-  // assign progression array to a string
   const progressionString = progressionArray.toString();
-  const question = progressionString.replace(right, '..').replace(/,/g, ' ');
+  const randomIndexNum = getRandomNum(0, 9);
+  const rightAnswer = progressionArray[randomIndexNum].toString();
+  const question = progressionString.replace(rightAnswer, '..').replace(/,/g, ' ');
 
-  return { question, right };
+  return { question, rightAnswer };
 }
 
 export default mathProgression;

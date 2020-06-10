@@ -1,5 +1,8 @@
 <h1>Brain games on JavaScript.</h1> 
 
+<p>To maintaing this project in order are used: 
+<a href="https://codeclimate.com/github/WilhelmYakunin/frontend-project-lvl1"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a> & <a href="https://github.com/WilhelmYakunin/frontend-project-lvl1/actions"><img src="https://github.com/WilhelmYakunin/frontend-project-lvl1/workflows/brain-games%20project%20of%20lvl-1/badge.svg" alt="Braing Games" style="max-width:100%;"></a></p>
+
 <img src="https://raw.githubusercontent.com/Hexlet/hexletguides.github.io/master/images/hexlet_logo128.png" alt="Hexlet Ltd. logo" style="max-width:100%;">
 
 <p>This a JavaScript programming languge project, that presents the mathematical games.
@@ -16,19 +19,23 @@ Thought the gameplay a user ought to answer to three question per each session o
 <p>Please download this game by link below:
 <a href="https://github.com/WilhelmYakunin/frontend-project-lvl1/archive/master.zip">archive copy</a></p>
 
-<p>To maintaing this project in order are used: 
-<a href="https://codeclimate.com/github/WilhelmYakunin/frontend-project-lvl1"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a> & <a href="https://github.com/WilhelmYakunin/frontend-project-lvl1/actions"><img src="https://github.com/WilhelmYakunin/frontend-project-lvl1/workflows/brain-games%20project%20of%20lvl-1/badge.svg" alt="Braing Games" style="max-width:100%;"></a></p>
+<p>Please take a look at how to win each game here:
+ <ol> 
+    <li>is tne number even?
+      <a href="https://asciinema.org/a/338118" target="_blank"><img src="https://asciinema.org/a/338118.svg" width="320" /></a>
+    </li>
+    <li>what the result of an expression is? 
+      <a href="https://asciinema.org/a/338123" target="_blank"><img src="https://asciinema.org/a/338123.svg" width="320"/></a>
+    </li>
+    <li>what the Gratest Common devisor is?
+      <a href="https://asciinema.org/a/338125" target="_blank"><img src="https://asciinema.org/a/338125.svg" width="320" /></a>
+    </li>
+    <li>what a number is missing in the chain?
+      <a href="https://asciinema.org/a/hbdQGHmhlWbpwlzZflFYRAdwN" target="_blank"><img src="https://asciinema.org/a/hbdQGHmhlWbpwlzZflFYRAdwN.svg" width="320"/></a>
+    </li>
+    <li>is this number prime?
+      <a href="https://asciinema.org/a/338129" target="_blank"><img src="https://asciinema.org/a/338129.svg" width="320" /></a>
+    </li>
+  </ol>
 
-<aside>Please take a look at how to win each game here:
-
-1) [is Even? video](https://youtu.be/CYDIFqEj_-E)
-
-2) [what the result of an expression is? video](https://youtu.be/Gpr-w40AOTI)
-
-3) [what the Gratest Common devisor is? video](https://youtu.be/HROl4j2f6oc)
-
-4) [what a number is missing in the chain? video](https://youtu.be/6hz4M4mLlD0)
-
-5) [is this number prime? video](https://youtu.be/Pyb-HYBn_j8)
-
-For more API information please see the package.json file or just put the string "make install" in the core catalog with the CLI. </aside>
+For more API information please see the package.json file or just put the string "make install" in the core catalog with the CLI.</p>

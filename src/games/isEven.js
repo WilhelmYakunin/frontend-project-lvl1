@@ -1,10 +1,10 @@
-import randomNum from '../randomNum.js';
+import getRandomNum from '../getRandomNum.js';
 
 function even() {
-  const question = randomNum(1, 100);// get a random number for question
-  const right = (question % 2 === 0) ? 'yes' : 'no'; // get data for checking user's answer
+  const question = getRandomNum(1, 100);
+  const rightAnswer = (question % 2 === 0) ? 'yes' : 'no';
 
-  return { question, right };
+  return { question, rightAnswer };
 }
 
 export default even;

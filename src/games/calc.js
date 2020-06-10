@@ -1,32 +1,24 @@
-import randomNum from '../randomNum.js';
+import getRandomNum from '../getRandomNum.js';
 
-function calc() {
-  // get a random number from -30 to 30 just for simplicity
-  const num1 = randomNum(-30, 30);
+function calculate() {
+  const getFirstRandomNum = getRandomNum(-30, 30);
+  const getSecondRandomNum = getRandomNum(1, 30);
 
-  // get a random number from 1 to 30 just for simplicity
-  const num2 = randomNum(1, 30);
+  const mathOperands = ['+', '-', '*'];
 
-  // array of the mathematic signs
-  const arrOfquatyfires = ['+', '-', '*'];
+  const randomOperand = mathOperands[Math.floor(Math.random() * mathOperands.length)];
 
-  // randomly choose a sign
-  const quantyfire = arrOfquatyfires[randomNum(0, 2)];
+  const question = `${getFirstRandomNum.toString()}${randomOperand}${getSecondRandomNum.toString()}`;
 
-  // formulating an expression consistiong of nums and sings randomly choosen
-  const question = `${num1.toString()} ${quantyfire} ${num2.toString()}`;
-
-  // make function for sings of mathematic operators
-  const arrOfFunction = {
-    '+': function plus(x, y) { return x + y; },
-    '-': function minus(x, y) { return x - y; },
-    '*': function multiply(x, y) { return x * y; },
+  const makeEval = {
+    '+': (x, y) => x + y,
+    '-': (x, y) => x - y,
+    '*': (x, y) => x * y,
   };
 
-  // evaluated expression is the right answer
-  const right = arrOfFunction[quantyfire](num1, num2).toString();
+  const rightAnswer = makeEval[randomOperand](getFirstRandomNum, getSecondRandomNum).toString();
 
-  return { question, right };
+  return { question, rightAnswer };
 }
 
-export default calc;
+export default calculate;

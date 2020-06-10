@@ -1,5 +1,5 @@
-#! node --experimental-modules
-import game from '../src/index.js';
+#!/usr/bin/env node
+import playGame from '../src/index.js';
 import mathProgression from '../src/games/progression.js';
 
-game(mathProgression);
+playGame(mathProgression);
