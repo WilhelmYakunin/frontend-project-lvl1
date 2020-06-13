@@ -2,9 +2,9 @@ import getRandomNum from '../getRandomNum.js';
 
 const task = 'What number is missing in the progression?';
 
-function getMathProgression(dificulty) {
+function getMathProgression(difficulty) {
   const progressionStep = getRandomNum(1, 10);
-  const tenNumbers = [getRandomNum(dificulty[0], dificulty[1])];
+  const tenNumbers = [getRandomNum(difficulty[0], difficulty[1])];
 
   for (let i = 1; i < 10; i += 1) {
     const nextNum = tenNumbers[(i - 1)] + progressionStep;

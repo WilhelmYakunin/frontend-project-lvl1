@@ -1,4 +1,4 @@
-export default function setDificulty(dificulty) {
+export default function setDifficulty(dificulty) {
   if (dificulty === '1') {
     console.log('Your choie: easy ;)');
     return [-30, 30];

@@ -2,9 +2,9 @@ import getRandomNum from '../getRandomNum.js';
 
 const task = 'What is the result of the expression?';
 
-function getCalc(dificulty) {
-  const operand1 = getRandomNum(dificulty[0], dificulty[1]);
-  const operand2 = getRandomNum(dificulty[0], dificulty[1]);
+function getCalc(difficulty) {
+  const operand1 = getRandomNum(difficulty[0], difficulty[1]);
+  const operand2 = getRandomNum(difficulty[0], difficulty[1]);
 
   const mathOperands = ['+', '-', '*'];
   const operator = mathOperands[getRandomNum(0, mathOperands.length - 1)];

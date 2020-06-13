@@ -10,8 +10,8 @@ const isPrime = (num) => {
   } return true;
 };
 
-function getPrime(dificulty) {
-  const question = getRandomNum(dificulty[0], dificulty[1]);
+function getPrime(difficulty) {
+  const question = getRandomNum(difficulty[0], difficulty[1]);
   const rightAnswer = (isPrime(question)) ? 'yes' : 'no';
 
   return { question, rightAnswer };
