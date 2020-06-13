@@ -1,6 +1,9 @@
 import getRandomNum from '../getRandomNum.js';
 
-function mathProgression() {
+const task = 'What number is missing in the progression?';
+
+function getMathProgression() {
+  // diapozone of random nums is randomly choosen
   const progressionStep = getRandomNum(1, 10);
   const progressionArray = [getRandomNum(-30, 30)];
 
@@ -10,11 +13,10 @@ function mathProgression() {
   }
 
   const progressionString = progressionArray.toString();
-  const randomIndexNum = getRandomNum(0, 9);
-  const rightAnswer = progressionArray[randomIndexNum].toString();
+  const rightAnswer = progressionArray[getRandomNum(0, 9)].toString();
   const question = progressionString.replace(rightAnswer, '..').replace(/,/g, ' ');
 
   return { question, rightAnswer };
 }
 
-export default mathProgression;
+export { getMathProgression, task };

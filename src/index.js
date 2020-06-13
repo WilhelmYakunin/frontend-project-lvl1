@@ -1,27 +1,25 @@
 import readlineSync from 'readline-sync';
-import greetUser from './greetUser.js';
-import tasksOfGames from './tasksOfGames.js';
-import correctAnswerWas from './correctAnswerWas.js';
 
-function playGame(gameFunction) {
+function playGame(setGame, task) {
   const userName = readlineSync.question('May I have your name? ');
-  greetUser(userName);
-  console.log(tasksOfGames[gameFunction.name]);
+  console.log(`Welcome to the Brain Games! \n
+  Hello, ${userName}! \n`);
+  console.log(task);
 
-  let gameRoundsCout = 0;
-  const numberForWin = 3;
-  while (gameRoundsCout !== numberForWin) {
-    const getGameData = gameFunction();
+  let roundsCout = 0;
+  const numberToWin = 3;
+  while (roundsCout !== numberToWin) {
+    const gameData = setGame();
 
-    const answer = readlineSync.question(`Question: ${getGameData.question} \n`);
+    const answer = readlineSync.question(`Question: ${gameData.question} \n`);
     console.log(`Your answer: ${answer}`);
 
-    if (answer === getGameData.rightAnswer) {
+    if (answer === gameData.rightAnswer) {
       console.log('Correct!\n');
-      gameRoundsCout += 1;
+      roundsCout += 1;
     } else {
       return console.log(`${answer} is wrong answer ;(.
-        Correct answer was ${correctAnswerWas(gameFunction.name, getGameData.rightAnswer)}.
+        Correct answer was ${gameData.rightAnswer}.
         Let's try again, ${userName}!`);
     }
   } return console.log(`Congratulations, ${userName}!`);

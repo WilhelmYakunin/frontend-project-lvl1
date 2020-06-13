@@ -1,18 +1,21 @@
 import getRandomNum from '../getRandomNum.js';
 
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const isPrime = (num) => {
-  let coutIfNotPrime = 0;
   for (let i = 2; i < Math.sqrt(num); i += 1) {
-    coutIfNotPrime += ((num % i === 0) ? 1 : 0);
-  } return (coutIfNotPrime === 0);
+    if (num % i === 0) {
+      return false;
+    }
+  } return true;
 };
 
-function prime() {
+function getPrime() {
+  // diapozone of random nums is randomly choosen
   const question = getRandomNum(4, 100);
-
   const rightAnswer = (isPrime(question)) ? 'yes' : 'no';
 
   return { question, rightAnswer };
 }
 
-export default prime;
+export { getPrime, task };

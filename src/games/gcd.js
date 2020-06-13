@@ -1,16 +1,19 @@
 import getRandomNum from '../getRandomNum.js';
 
-function gcd() {
-  const firstRandomOperand = getRandomNum(-30, 30);
-  const secondRandomOperand = getRandomNum(1, 30);
+const task = 'Find the greatest common divisor of given numbers.';
 
-  const question = `${firstRandomOperand.toString()} ${secondRandomOperand.toString()}`;
+const gcd = (a, b) => (b === 0 ? Math.abs(a) : gcd(b, a % b));
 
-  const getGCD = (a, b) => (b === 0 ? Math.abs(a) : getGCD(b, a % b));
+function getGcd() {
+  // diapozone of random nums is randomly choosen
+  const operand1 = getRandomNum(-30, 30);
+  const operand2 = getRandomNum(1, 30);
 
-  const rightAnswer = getGCD(firstRandomOperand, secondRandomOperand).toString();
+  const question = `${operand1} ${operand2}`;
+
+  const rightAnswer = gcd(operand1, operand2).toString();
 
   return { question, rightAnswer };
 }
 
-export default gcd;
+export { getGcd, task };
