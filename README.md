@@ -5,7 +5,7 @@
 
 <img src="https://raw.githubusercontent.com/Hexlet/hexletguides.github.io/master/images/hexlet_logo128.png" alt="Hexlet Ltd. logo" style="max-width:100%;">
 
-Use Node.js version: 14.4.0.
+Used Node.js version: 14.4.0.
 
 <p>This a JavaScript programming languge project, that presents the mathematical games.
 The project is called "Brain games". 
