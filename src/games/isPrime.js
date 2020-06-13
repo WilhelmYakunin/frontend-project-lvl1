@@ -10,9 +10,8 @@ const isPrime = (num) => {
   } return true;
 };
 
-function getPrime() {
-  // diapozone of random nums is randomly choosen
-  const question = getRandomNum(4, 100);
+function getPrime(dificulty) {
+  const question = getRandomNum(dificulty[0], dificulty[1]);
   const rightAnswer = (isPrime(question)) ? 'yes' : 'no';
 
   return { question, rightAnswer };

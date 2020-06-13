@@ -2,19 +2,17 @@ import getRandomNum from '../getRandomNum.js';
 
 const task = 'What number is missing in the progression?';
 
-function getMathProgression() {
-  // diapozone of random nums is randomly choosen
+function getMathProgression(dificulty) {
   const progressionStep = getRandomNum(1, 10);
-  const progressionArray = [getRandomNum(-30, 30)];
+  const tenNumbers = [getRandomNum(dificulty[0], dificulty[1])];
 
   for (let i = 1; i < 10; i += 1) {
-    const nextNum = progressionArray[(i - 1)] + progressionStep;
-    progressionArray.push(nextNum);
+    const nextNum = tenNumbers[(i - 1)] + progressionStep;
+    tenNumbers.push(nextNum);
   }
 
-  const progressionString = progressionArray.toString();
-  const rightAnswer = progressionArray[getRandomNum(0, 9)].toString();
-  const question = progressionString.replace(rightAnswer, '..').replace(/,/g, ' ');
+  const rightAnswer = tenNumbers[getRandomNum(0, 9)].toString();
+  const question = tenNumbers.toString().replace(rightAnswer, '..').replace(/,/g, ' ');
 
   return { question, rightAnswer };
 }

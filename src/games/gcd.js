@@ -4,10 +4,10 @@ const task = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (a, b) => (b === 0 ? Math.abs(a) : gcd(b, a % b));
 
-function getGcd() {
+function getGcd(dificulty) {
   // diapozone of random nums is randomly choosen
-  const operand1 = getRandomNum(-30, 30);
-  const operand2 = getRandomNum(1, 30);
+  const operand1 = getRandomNum(dificulty[0], dificulty[1]);
+  const operand2 = getRandomNum(dificulty[0], dificulty[1]);
 
   const question = `${operand1} ${operand2}`;
 
