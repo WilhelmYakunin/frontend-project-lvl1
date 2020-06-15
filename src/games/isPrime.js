@@ -1,7 +1,5 @@
 import getRandomNum from '../getRandomNum.js';
 
-const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
 const isPrime = (num) => {
   for (let i = 2; i < Math.sqrt(num); i += 1) {
     if (num % i === 0) {
@@ -10,11 +8,12 @@ const isPrime = (num) => {
   } return true;
 };
 
-function getPrime(difficulty) {
-  const question = getRandomNum(difficulty[0], difficulty[1]);
-  const rightAnswer = (isPrime(question)) ? 'yes' : 'no';
+function getPrime(minNumber, maxNumber) {
+  const gameQuiz = 'Answer "yes" if given number is prime. Otherwise answer "no":';
+  const questionEssence = getRandomNum(minNumber, maxNumber);
+  const rightAnswer = isPrime(questionEssence) ? 'yes' : 'no';
 
-  return { question, rightAnswer };
+  return { gameQuiz, questionEssence, rightAnswer };
 }
 
-export { getPrime, task };
+export default getPrime;

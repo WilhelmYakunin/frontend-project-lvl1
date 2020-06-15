@@ -6,7 +6,6 @@
   "name": "brain-games",
   "version": "0.0.5",
   "description": "<h1>Brain games on JavaScript.</h1>",
-  "main": "bin/brain-games.js",
   "scripts": {
     "start": "node bin/brain-even.js"
   },
@@ -19,11 +18,7 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "dependencies": {
-    "eslint-config-airbnb": "^18.1.0",
     "readline-sync": "^1.4.10"
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
   },
   "devDependencies": {
     "eslint": "^6.8.0",
