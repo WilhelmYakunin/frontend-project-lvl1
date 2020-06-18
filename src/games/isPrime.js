@@ -1,4 +1,5 @@
 import getRandomNum from '../getRandomNum.js';
+
 const MIN_NUMBER_ISPRIME = 1;
 const MAX_NUMBER_ISPRIME = 101;
 

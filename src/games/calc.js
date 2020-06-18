@@ -1,4 +1,5 @@
 import getRandomNum from '../getRandomNum.js';
+
 const MIN_NUMBER_CALC = 1;
 const MAX_NUMBER_CALC = 50;
 

@@ -1,4 +1,5 @@
 import getRandomNum from '../getRandomNum.js';
+
 const MIN_NUMBER_PROGRESSION = 1;
 const MAX_NUMBER_PROGRESSION = 100;
 const PROGRESSION_LENGTH = 11;

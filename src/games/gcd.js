@@ -1,4 +1,5 @@
 import getRandomNum from '../getRandomNum.js';
+
 const MIN_NUMBER_GCD = 1;
 const MAX_NUMBER_GCD = 100;
 
