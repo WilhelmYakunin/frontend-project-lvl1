@@ -1,32 +1,28 @@
 import readlineSync from 'readline-sync';
+const ROUNDS_TO_WIN = 3;
 
-function playGame(generateRound) {
+function playGame(generateGameData) {
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Welcome to the Brain Games! \n
   Hello, ${userName}!`);
-
-  const diapozoneOfNumsForAllGames = [1, 100];
-  const [minNumber, maxNumber] = diapozoneOfNumsForAllGames;
-
+  
   let roundsCount = 0;
-  const roundsToWin = 3;
-  while (roundsCount < roundsToWin) {
-    const gameData = generateRound(minNumber, maxNumber);
-    const { gameQuiz, questionEssence, rightAnswer } = gameData;
-    console.log(gameQuiz);
-    const answer = readlineSync.question(`${questionEssence} \n`);
+  while (roundsCount < ROUNDS_TO_WIN) {
+    const gameData = generateGameData();
+    const { quiz, question, correctAnswer } = gameData;
+    console.log(quiz);
+    const answer = readlineSync.question(`${question} \n`);
     console.log(`Your answer: ${answer}`);
 
-    if (answer === rightAnswer) {
+    if (answer === correctAnswer) {
       console.log('Correct!\n');
       roundsCount += 1;
     } else {
       return console.log(`${answer} is wrong answer ;(.
-        Correct answer was ${rightAnswer}.
+        Correct answer was ${correctAnswer}.
         Let's try again, ${userName}!`);
     }
   } console.log(`Congratulations, ${userName}!`);
-  return undefined;
 }
 
 export default playGame;

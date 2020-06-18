@@ -1,33 +1,28 @@
 import getRandomNum from '../getRandomNum.js';
+const MIN_NUMBER_PROGRESSION = 1;
+const MAX_NUMBER_PROGRESSION = 100;
+const PROGRESSION_LENGTH = 11;
 
-function makeProgression(minNumber, maxNumber) {
-  const progressionStep = getRandomNum(minNumber, maxNumber);
-  // 10 because by technical desription progression consists of ten numbers
-  const progressionLength = 10;
-  let progressionNum = getRandomNum(minNumber, maxNumber);
-  const numsOfProgression = [];
-  const indexOfHiddenElement = getRandomNum(0, progressionLength - 1);
-  let rightAnswer = '';
+function getMathProgressionOfTenNumbers() {
+  const quiz = 'What number is missing in the progression?';
 
-  for (let i = 10; i < progressionLength; i += 1) {
-    progressionNum += progressionStep;
-    if (i === indexOfHiddenElement) {
-      rightAnswer = progressionNum.toString();
-      numsOfProgression.push('..');
-      progressionNum += progressionStep;
-    } numsOfProgression.push(progressionNum);
+  const firstProgressionNum = getRandomNum(MIN_NUMBER_PROGRESSION, MAX_NUMBER_PROGRESSION);
+  const progressionStep = getRandomNum(MIN_NUMBER_PROGRESSION, MAX_NUMBER_PROGRESSION);
+  const indexOfRandomElement = getRandomNum(0, PROGRESSION_LENGTH - 1);
+  const numsOfProgression = [firstProgressionNum];
+  let correctAnswer;
+
+  for (let i = 2; i < PROGRESSION_LENGTH; i += 1) {
+    let nextNum = firstProgressionNum + progressionStep * (i - 1);
+    if (i === indexOfRandomElement) {
+      correctAnswer = nextNum.toString();
+      nextNum = '..';
+    } numsOfProgression.push(nextNum);
   }
-  const questionEssence = numsOfProgression.join(', ');
 
-  return { rightAnswer, questionEssence };
-}
+  const question = numsOfProgression.join(' ');
 
-function getMathProgressionOfTenNumbers(minNumber, maxNumber) {
-  const gameQuiz = 'What number is missing in the progression?';
-
-  const { questionEssence, rightAnswer } = makeProgression(minNumber, maxNumber);
-
-  return { gameQuiz, questionEssence, rightAnswer };
+  return { quiz, question, correctAnswer };
 }
 
 export default getMathProgressionOfTenNumbers;

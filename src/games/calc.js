@@ -1,14 +1,16 @@
 import getRandomNum from '../getRandomNum.js';
+const MIN_NUMBER_CALC = 1;
+const MAX_NUMBER_CALC = 50;
 
-function getCalc(minNumber, maxNumber) {
-  const gameQuiz = 'What is the result of the expression?';
-  const operand1 = getRandomNum(minNumber, maxNumber);
-  const operand2 = getRandomNum(minNumber, maxNumber);
+function getCalc() {
+  const quiz = 'What is the result of the expression?';
+  const operand1 = getRandomNum(MIN_NUMBER_CALC, MAX_NUMBER_CALC);
+  const operand2 = getRandomNum(MIN_NUMBER_CALC, MAX_NUMBER_CALC);
 
   const mathOperands = ['+', '-', '*'];
   const operator = mathOperands[getRandomNum(0, mathOperands.length - 1)];
 
-  const questionEssence = `${operand1}${operator}${operand2}`;
+  const question = `${operand1}${operator}${operand2}`;
 
   const operations = {
     '+': (x, y) => x + y,
@@ -16,9 +18,9 @@ function getCalc(minNumber, maxNumber) {
     '*': (x, y) => x * y,
   };
 
-  const rightAnswer = operations[operator](operand1, operand2).toString();
+  const correctAnswer = operations[operator](operand1, operand2).toString();
 
-  return { gameQuiz, questionEssence, rightAnswer };
+  return { quiz, question, correctAnswer };
 }
 
 export default getCalc;
