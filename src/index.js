@@ -3,9 +3,9 @@ import readlineSync from 'readline-sync';
 const ROUNDS_TO_WIN = 3;
 
 function playGame(generateGameData) {
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Welcome to the Brain Games! \n
-  Hello, ${userName}!`);
+  const userName = readlineSync.question(`Welcome to the Brain Games!
+May I have your name?`);
+  console.log(`Hello, ${userName}!`);
   const { quiz } = generateGameData();
   console.log(quiz);
 
