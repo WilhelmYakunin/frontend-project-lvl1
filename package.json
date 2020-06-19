@@ -18,13 +18,15 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "dependencies": {
+    "eslint-config-airbnb": "^18.2.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.21.2"
   },
+  "@std/esm": "cjs",
   "keywords": [],
   "author": "wilhelm",
   "license": "ISC",

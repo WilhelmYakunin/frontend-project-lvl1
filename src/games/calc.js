@@ -1,12 +1,12 @@
 import getRandomNum from '../getRandomNum.js';
 
-const MIN_NUMBER_CALC = 1;
-const MAX_NUMBER_CALC = 50;
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 50;
 
 function getCalc() {
   const quiz = 'What is the result of the expression?';
-  const operand1 = getRandomNum(MIN_NUMBER_CALC, MAX_NUMBER_CALC);
-  const operand2 = getRandomNum(MIN_NUMBER_CALC, MAX_NUMBER_CALC);
+  const operand1 = getRandomNum(MIN_NUMBER, MAX_NUMBER);
+  const operand2 = getRandomNum(MIN_NUMBER, MAX_NUMBER);
 
   const mathOperands = ['+', '-', '*'];
   const operator = mathOperands[getRandomNum(0, mathOperands.length - 1)];

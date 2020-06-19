@@ -1,7 +1,7 @@
 import getRandomNum from '../getRandomNum.js';
 
-const MIN_NUMBER_ISPRIME = 1;
-const MAX_NUMBER_ISPRIME = 101;
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 101;
 
 const isPrime = (num) => {
   for (let i = 2; i < Math.sqrt(num); i += 1) {
@@ -13,7 +13,7 @@ const isPrime = (num) => {
 
 function getPrime() {
   const quiz = 'Answer "yes" if given number is prime. Otherwise answer "no":';
-  const question = getRandomNum(MIN_NUMBER_ISPRIME, MAX_NUMBER_ISPRIME);
+  const question = getRandomNum(MIN_NUMBER, MAX_NUMBER);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
 
   return { quiz, question, correctAnswer };

@@ -1,24 +1,27 @@
 import getRandomNum from '../getRandomNum.js';
 
-const MIN_NUMBER_PROGRESSION = 1;
-const MAX_NUMBER_PROGRESSION = 100;
-const PROGRESSION_LENGTH = 11;
+const MIN_NUMBER = 1;
+const MAX_NUMBER = 100;
+const PROGRESSION_LENGTH = 10;
+const HIDDEN_PLACEHELDER = '..';
 
-function getMathProgressionOfTenNumbers() {
+function getMathProgression() {
   const quiz = 'What number is missing in the progression?';
 
-  const firstProgressionNum = getRandomNum(MIN_NUMBER_PROGRESSION, MAX_NUMBER_PROGRESSION);
-  const progressionStep = getRandomNum(MIN_NUMBER_PROGRESSION, MAX_NUMBER_PROGRESSION);
-  const indexOfRandomElement = getRandomNum(0, PROGRESSION_LENGTH - 1);
-  const numsOfProgression = [firstProgressionNum];
+  const firstProgressionNum = getRandomNum(MIN_NUMBER, MAX_NUMBER);
+  const progressionStep = getRandomNum(MIN_NUMBER, MAX_NUMBER);
+  const indexOfHiddenElement = getRandomNum(0, PROGRESSION_LENGTH - 1);
+  const numsOfProgression = [];
   let correctAnswer;
 
-  for (let i = 2; i < PROGRESSION_LENGTH; i += 1) {
-    let nextNum = firstProgressionNum + progressionStep * (i - 1);
-    if (i === indexOfRandomElement) {
-      correctAnswer = nextNum.toString();
-      nextNum = '..';
-    } numsOfProgression.push(nextNum);
+  for (let i = 0; i < PROGRESSION_LENGTH; i += 1) {
+    if (i !== indexOfHiddenElement) {
+      const nextNum = firstProgressionNum + progressionStep * (i - 1);
+      numsOfProgression.push(nextNum);
+    } else {
+      correctAnswer = (firstProgressionNum + progressionStep * (i - 1)).toString();
+      numsOfProgression.push(HIDDEN_PLACEHELDER);
+    }
   }
 
   const question = numsOfProgression.join(' ');
@@ -26,4 +29,4 @@ function getMathProgressionOfTenNumbers() {
   return { quiz, question, correctAnswer };
 }
 
-export default getMathProgressionOfTenNumbers;
+export default getMathProgression;

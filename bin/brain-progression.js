@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 import playGame from '../src/index.js';
-import getMathProgressionOfTenNumbers from '../src/games/progression.js';
+import getMathProgression from '../src/games/progression.js';
 
-playGame(getMathProgressionOfTenNumbers);
+playGame(getMathProgression);
