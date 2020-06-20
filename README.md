@@ -21,13 +21,13 @@ Thought the gameplay a user ought to answer to three question per each session o
 <a href="https://github.com/WilhelmYakunin/frontend-project-lvl1/archive/master.zip">archive copy</a>
 or put with your terminal <code>git clone https://github.com/WilhelmYakunin/frontend-project-lvl1.git</code> and <code>Enter</code>
  <blockquote>
-   If your operating system isn't *nix alike, you need to change the shebangs in each game file at the /src/game directory to "node --experimental modules" and also add make.exe and its dependencies the core catalog in frontend-project-lvl1/ directory. Then proceed the steps below.
+   If your operating system isn't *nix or alike, you need to change the shebangs in each game file at the /src/game directory to "node --experimental modules" and also add make.exe and its dependencies the core catalog in frontend-project-lvl1/ directory. Then proceed the steps below.
  </blockquote>
 Afterwards deal in the command line:
 <ol>
   <li><code>cd frontend-project-lvl1/</code> or make similiar manipulation to change directory to frontend-project-lvl1/</li>
   <li><code>make install</code></li>
-  <li><code>sudo make link</code>, but you may need to add <code>--force</code> at th end of this command</li>
+  <li><code>sudo make link</code>, but you may need to add <code>--force</code> at the end of this command</li>
  </ol>
  </p>
 
