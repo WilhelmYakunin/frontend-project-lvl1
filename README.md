@@ -31,7 +31,7 @@ Afterwards deal in the command line:
  </ol>
  </p>
 
-<p><h2>Please take a look at how to play each game here:</h2>
+<h2>Please take a look at how to play each game here:</h2>
  <ol> 
    <li><p>is tne number even?</p>
       <a href="https://asciinema.org/a/338118" target="_blank"><img src="https://asciinema.org/a/338118.svg" width="320" /></a>
@@ -49,5 +49,3 @@ Afterwards deal in the command line:
       <a href="https://asciinema.org/a/P3bnh94Gsg6RQhd5O747IQ5pl" target="_blank"><img src="https://asciinema.org/a/338129.svg" width="320" /></a>
     </li>
   </ol>
-
-For more API information please see the package.json file or just put the string "make install" in the core catalog with the CLI.</p>
