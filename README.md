@@ -31,7 +31,7 @@ Afterwards deal in the command line:
  </ol>
  </p>
 
-<p>Please take a look at how to play each game here:
+<p><h2>Please take a look at how to play each game here:</h2>
  <ol> 
    <li><p>is tne number even?</p>
       <a href="https://asciinema.org/a/338118" target="_blank"><img src="https://asciinema.org/a/338118.svg" width="320" /></a>
