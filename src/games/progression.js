@@ -3,11 +3,10 @@ import getRandomNum from '../getRandomNum.js';
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
 const PROGRESSION_LENGTH = 10;
-const HIDDEN_PLACEHELDER = '..';
+const HIDDEN_PLACEHOLDER = '..';
+const QUIZ = 'What number is missing in the progression?';
 
-function getMathProgression() {
-  const quiz = 'What number is missing in the progression?';
-
+function generateGameData() {
   const firstProgressionNum = getRandomNum(MIN_NUMBER, MAX_NUMBER);
   const progressionStep = getRandomNum(MIN_NUMBER, MAX_NUMBER);
   const indexOfHiddenElement = getRandomNum(0, PROGRESSION_LENGTH - 1);
@@ -20,13 +19,17 @@ function getMathProgression() {
       numsOfProgression.push(nextNum);
     } else {
       correctAnswer = (firstProgressionNum + progressionStep * (i - 1)).toString();
-      numsOfProgression.push(HIDDEN_PLACEHELDER);
+      numsOfProgression.push(HIDDEN_PLACEHOLDER);
     }
   }
 
   const question = numsOfProgression.join(' ');
 
-  return { quiz, question, correctAnswer };
+  return { question, correctAnswer };
+}
+
+function getMathProgression() {
+  return { QUIZ, generateGameData };
 }
 
 export default getMathProgression;
