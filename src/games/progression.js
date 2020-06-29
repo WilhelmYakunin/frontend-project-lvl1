@@ -4,7 +4,7 @@ const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
 const PROGRESSION_LENGTH = 10;
 const HIDDEN_PLACEHOLDER = '..';
-const QUIZ = 'What number is missing in the progression?';
+const quiz = 'What number is missing in the progression?';
 
 function generateGameData() {
   const firstProgressionNum = getRandomNum(MIN_NUMBER, MAX_NUMBER);
@@ -29,7 +29,7 @@ function generateGameData() {
 }
 
 function getMathProgression() {
-  return { QUIZ, generateGameData };
+  return { quiz, generateGameData };
 }
 
 export default getMathProgression;

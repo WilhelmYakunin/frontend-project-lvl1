@@ -2,7 +2,7 @@ import getRandomNum from '../getRandomNum.js';
 
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 1000;
-const QUIZ = 'Answer "yes" if the number is even, otherwise answer "no".';
+const quiz = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function generateGameData() {
   const question = getRandomNum(MIN_NUMBER, MAX_NUMBER);
@@ -12,7 +12,7 @@ function generateGameData() {
 }
 
 function getEvenGameData() {
-  return { QUIZ, generateGameData };
+  return { quiz, generateGameData };
 }
 
 export default getEvenGameData;

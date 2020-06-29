@@ -2,7 +2,7 @@ import getRandomNum from '../getRandomNum.js';
 
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
-const QUIZ = 'Find the greatest common divisor of given numbers:';
+const quiz = 'Find the greatest common divisor of given numbers:';
 
 const findGcd = (a, b) => (b === 0 ? Math.abs(a) : findGcd(b, a % b));
 
@@ -18,7 +18,7 @@ function generateGameData() {
 }
 
 function getGcd() {
-  return { QUIZ, generateGameData };
+  return { quiz, generateGameData };
 }
 
 export default getGcd;

@@ -2,15 +2,16 @@ import readlineSync from 'readline-sync';
 
 const ROUNDS_TO_WIN = 3;
 
-function playGame(gameData) {
+function playGame(setGameData) {
   const userName = readlineSync.question(`Welcome to the Brain Games!
 May I have your name?`);
   console.log(`Hello, ${userName}!`);
-  console.log(gameData().QUIZ);
+  const { quiz, generateGameData } = setGameData();
+  console.log(quiz);
 
   let winsCount = 0;
   while (winsCount < ROUNDS_TO_WIN) {
-    const { question, correctAnswer } = gameData().generateGameData();
+    const { question, correctAnswer } = generateGameData();
 
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');

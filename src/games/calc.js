@@ -2,7 +2,7 @@ import getRandomNum from '../getRandomNum.js';
 
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 50;
-const QUIZ = 'What is the result of the expression?';
+const quiz = 'What is the result of the expression?';
 
 function generateGameData() {
   const operand1 = getRandomNum(MIN_NUMBER, MAX_NUMBER);
@@ -25,7 +25,7 @@ function generateGameData() {
 }
 
 function getCalc() {
-  return { QUIZ, generateGameData };
+  return { quiz, generateGameData };
 }
 
 export default getCalc;

@@ -34,18 +34,18 @@ Afterwards deal in the command line:
 <h2>Please take a look at how to play each game here:</h2>
  <ol> 
    <li><p>is tne number even?</p>
-      <a href="https://asciinema.org/a/338118" target="_blank"><img src="https://asciinema.org/a/338118.svg" width="320" /></a>
+      <a href="https://asciinema.org/a/d00W5teQNOIOIg9ZPQkXXuDdq" target="_blank"><img src="https://asciinema.org/a/338118.svg" width="320" /></a>
     </li>
    <li><p>what the result of an expression is?</p> 
-      <a href="https://asciinema.org/a/f5ZWbnnS9o7aNe5xrdJLj0tSl" target="_blank"><img src="https://asciinema.org/a/338123.svg" width="320"/></a>
+      <a href="https://asciinema.org/a/djh6ZHm23saZmUHWvw7I8UcDk" target="_blank"><img src="https://asciinema.org/a/338123.svg" width="320"/></a>
     </li>
    <li><p>what the Gratest Common devisor is?</p>
-      <a href="https://asciinema.org/a/Ew0WMcz3yR5gxXNbgeS6vji7m" target="_blank"><img src="https://asciinema.org/a/338125.svg" width="320" /></a>
+      <a href="https://asciinema.org/a/fhi33wIkyaF037rpYXrH1uAm5" target="_blank"><img src="https://asciinema.org/a/338125.svg" width="320" /></a>
     </li>
    <li><p>what a number is missing in the chain?</p>
-      <a href="https://asciinema.org/a/yutBEGdDc2Rmd3P0JcZulC3lZ" target="_blank"><img src="https://asciinema.org/a/hbdQGHmhlWbpwlzZflFYRAdwN.svg" width="320"/></a>
+      <a href="https://asciinema.org/a/iE0GmQoJgj3G4dDp4CkhH6EbF" target="_blank"><img src="https://asciinema.org/a/hbdQGHmhlWbpwlzZflFYRAdwN.svg" width="320"/></a>
     </li>
    <li><p>is this number prime?</p>
-      <a href="https://asciinema.org/a/P3bnh94Gsg6RQhd5O747IQ5pl" target="_blank"><img src="https://asciinema.org/a/338129.svg" width="320" /></a>
+      <a href="https://asciinema.org/a/zzpdCoIpPcrVbZ9SsOILkliQG" target="_blank"><img src="https://asciinema.org/a/338129.svg" width="320" /></a>
     </li>
   </ol>
