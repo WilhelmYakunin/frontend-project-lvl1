@@ -8,8 +8,8 @@ function generateGameData() {
   const operand1 = getRandomNum(MIN_NUMBER, MAX_NUMBER);
   const operand2 = getRandomNum(MIN_NUMBER, MAX_NUMBER);
 
-  const mathOperands = ['+', '-', '*'];
-  const operator = mathOperands[getRandomNum(0, mathOperands.length - 1)];
+  const mathOperators = ['+', '-', '*'];
+  const operator = mathOperands[getRandomNum(0, mathOperators.length - 1)];
 
   const question = `${operand1}${operator}${operand2}`;
 

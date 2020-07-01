@@ -1,6 +1,6 @@
 import getRandomNum from '../getRandomNum.js';
 
-const MIN_NUMBER = 1;
+const MIN_NUMBER = 2;
 const MAX_NUMBER = 101;
 const quiz = 'Answer "yes" if given number is prime. Otherwise answer "no":';
 
