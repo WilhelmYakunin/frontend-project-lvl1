@@ -9,7 +9,7 @@ function generateGameData() {
   const operand2 = getRandomNum(MIN_NUMBER, MAX_NUMBER);
 
   const mathOperators = ['+', '-', '*'];
-  const operator = mathOperands[getRandomNum(0, mathOperators.length - 1)];
+  const operator = mathOperators[getRandomNum(0, mathOperators.length - 1)];
 
   const question = `${operand1}${operator}${operand2}`;
 
